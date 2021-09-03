@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TeamSection = () => {
+const TeamSection = ({name}) => {
   return(
     <div>
-      TeamSection
+      TeamSection {name}
     </div>
   )
 }
