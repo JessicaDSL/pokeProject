@@ -1,6 +1,6 @@
 import React from 'react';
+import ListPokeSection from '../components/ListPokeSection/ListPokeSection';
 
-import ListPokeSection from '../components/ListPokeSection';
 
 export default {
   title: 'Components/ListPokeSection',
