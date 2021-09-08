@@ -1,3 +1,3 @@
-import ListPokeSection from "../TeamSection/styles";
+import ListPokeSection from "./ListPokeSection";
 
 export default ListPokeSection;
