@@ -15,6 +15,10 @@ const Global =  createGlobalStyle`
     text-decoration: none;
   }
 
+  body{
+    background: #eee;
+  }
+
   ul {
     list-style: none;
   }
