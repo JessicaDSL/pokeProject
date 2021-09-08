@@ -7,3 +7,5 @@ export function verifyId(item) {
     return `#${item.ids}`;
   }
 }
+
+export const pokeImage = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
