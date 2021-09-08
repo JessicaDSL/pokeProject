@@ -3,7 +3,7 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 import { ListItem, Description } from "./styles";
 import { cardInfo } from "./content";
-import { verifyId } from "../utils/utils";
+import { verifyId } from "../../utils/utils";
 
 const PokeCard = () => {
   return (
