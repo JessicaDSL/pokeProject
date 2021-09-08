@@ -8,5 +8,4 @@ export default {
 }
 
 
-export const ComponentWithJessy = () => <TeamSection name="Jessy" /> 
-export const ComponentWithRonaldo = () => <TeamSection name="Ronalds" /> 
+export const component = () => <TeamSection/> 
