@@ -1,5 +1,5 @@
 import React from 'react';
-import PokeCard from '../PokeCard';
+import PokeCard from '../../src/components/PokeCard';
 
 export default {
   title: 'Components/PokeCard',
