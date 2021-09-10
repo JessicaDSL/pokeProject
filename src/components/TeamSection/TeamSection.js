@@ -1,33 +1,24 @@
 import React from "react";
 
-import { pokeImage } from "../../utils/utils";
-import { Component, TeamList } from "./styles";
+import {teamList} from "./team";
+import { Container, TeamList } from "./styles";
+import PokeChosenTeam from "../PokeChosenTeam";
 
 const TeamSection = () => {
   return (
-    <Component>
-      <TeamList>
+    <Container>
         <h1>Meu time</h1>
 
-        <ul>
+        <TeamList>
           <li>
-            <img src={pokeImage} alt="" />
+          {teamList.map((item) => {
+            return (
+              <PokeChosenTeam image={item.image}  alt={item.alt} />
+            );
+          })}
           </li>
-          <li>
-            <img src={pokeImage} alt="" />
-          </li>
-          <li>
-            <img src={pokeImage} alt="" />
-          </li>
-          <li>
-            <img src={pokeImage} alt="" />
-          </li>
-          <li>
-            <img src={pokeImage} alt="" />
-          </li>
-        </ul>
-      </TeamList>
-    </Component>
+        </TeamList>
+    </Container>
   );
 };
 

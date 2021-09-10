@@ -1,24 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const Component = styled.div`
+export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  margin: 60px 0;
+  height: 320px;
   justify-content: center;
   align-items: center;
-  margin: 60px 0;
-  ul {
-    list-style: none;
-  }
-  
-`;
-
-export const TeamList = styled.div`
-  width: 50vw;
-  height: 260px;
-  background-color: pink;
-  border-radius: 4px;
-
   h1 {
-    background-color: #f1305A;
+    width: 50vw;
+    background-color: #f1305a;
     text-align: center;
     padding-bottom: 10px;
     font-family: PokemonLight;
@@ -31,16 +22,28 @@ export const TeamList = styled.div`
     justify-content: center;
     align-items: center;
   }
-
   ul {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1.5rem;
+    list-style: none;
   }
-  ul li {
+`;
+
+export const TeamList = styled.ul`
+  width: 50vw;
+  padding: 30px 0;
+  background-color: pink;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  li {
     background-color: #fff;
     border-radius: 50%;
     padding: 1.5rem;
     cursor: pointer;
   }
-`
+  span {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    padding: 10px;
+  }
+`;
