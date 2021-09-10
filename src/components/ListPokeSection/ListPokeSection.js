@@ -1,23 +1,20 @@
 import React from "react";
 
-import { Section, PokeSection } from "./styles";
+import { Container, PokeList } from "./styles";
 import PokeCard from "../PokeCard";
+import { cardInfo } from "../ListPokeSection/content";
 
 const ListPokeSection = () => {
   return (
-    <Section>
-      <PokeSection>
-           <PokeCard /> 
-           <PokeCard /> 
-           <PokeCard /> 
-           <PokeCard /> 
-           <PokeCard /> 
-           <PokeCard /> 
-           <PokeCard /> 
-           <PokeCard /> 
-           <PokeCard />    
-      </PokeSection>
-    </Section>
+    <Container>
+      <PokeList>
+        {cardInfo.map((item) => {
+          return(
+            <PokeCard image={item.image} id={item.id} />
+          )
+        })}  
+      </PokeList>
+    </Container>
   );
 };
 
