@@ -1,15 +1,23 @@
 import React from "react";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
-import { numberPage } from "./content";
-import { Component, NumberList } from './styles'
+import { Container, List } from "./styles";
 
 const Footer = () => {
   return (
-    <Component>
-      {numberPage.map((item, key) => {
-        return <NumberList key={key}>{item.number}</NumberList>;
-      })}
-    </Component>
+    <Container>
+      <List>
+        <li>
+          <FavoriteIcon />
+        </li>
+        <li>
+          <FavoriteIcon />
+        </li>
+        <li>
+          <FavoriteIcon />
+        </li>
+      </List>
+    </Container>
   );
 };
 
