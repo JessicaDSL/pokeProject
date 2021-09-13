@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ListItem = styled.div`
   background: pink;
   display: flex;
+  width: 200px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
