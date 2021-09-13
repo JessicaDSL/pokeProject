@@ -2,20 +2,19 @@ import React from "react";
 
 import { Container, List } from "./styles";
 import PokeCard from "../PokeCard";
-import { cardInfo } from "./content";
 
-const PokeList = () => {
+const PokeList = ({ pokemons = [] }) => {
   return (
     <Container>
       <List>
-        {cardInfo.map((item) => {
-          return(
-            <PokeCard image={item.image} id={item.id} />
-          )
-        })}  
+        {pokemons.map( ({ image, id }) => (
+          <PokeCard image={image} id={id} />
+        ))}
       </List>
     </Container>
   );
 };
 
 export default PokeList;
+//ai ta dando esse erro esquisito
+//
