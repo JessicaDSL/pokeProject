@@ -27,7 +27,7 @@ export const Container = styled.div`
   }
 `;
 
-export const TeamList = styled.ul`
+export const List = styled.ul`
   width: 50vw;
   display: flex;
   padding: 30px 0;
