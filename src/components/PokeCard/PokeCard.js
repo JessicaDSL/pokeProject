@@ -1,12 +1,12 @@
 import React from "react";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
-import { ListItem, Description } from "./styles";
+import { Container, Description } from "./styles";
 import { formatPokeId } from "../../utils/utils";
 
 const PokeCard = ({ image, id }) => {
   return (
-    <ListItem>
+    <Container>
       <div>
         <img src={image} alt="" />
       </div>
@@ -16,26 +16,8 @@ const PokeCard = ({ image, id }) => {
           <FavoriteBorderIcon fontSize="large" />
         </button>
       </Description>
-    </ListItem>
+    </Container>
   );
 };
 
 export default PokeCard;
-
-/*
-              
-              
-              */
-
-/*<ListItem key={key}>
-                <div>
-                  <img src={item.image} alt="" />
-                </div>
-                <Description>
-                  <span>{verifyId(item)}</span>
-                  <button>
-                    <FavoriteBorderIcon />
-                  </button>
-                </Description>
-              </ListItem>
-            );*/

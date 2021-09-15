@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ListItem = styled.div`
+export const Container = styled.div`
   background: pink;
   display: flex;
   width: 200px;
