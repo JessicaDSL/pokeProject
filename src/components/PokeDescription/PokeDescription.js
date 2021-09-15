@@ -2,7 +2,7 @@ import React from "react";
 
 import { List } from "./styles";
 
-const PokeAttributes = ({ name, type, species }) => {
+const PokeDescription = ({ name, type, species }) => {
   return (
     <List>
         <li>Name: {name}</li>
@@ -12,4 +12,4 @@ const PokeAttributes = ({ name, type, species }) => {
   );
 };
 
-export default PokeAttributes;
+export default PokeDescription;
