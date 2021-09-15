@@ -1,3 +1,3 @@
-import PokeItem from "./PokeItem";
+import PokeInfo from "./PokeInfo";
 
-export default PokeItem;
+export default PokeInfo;
