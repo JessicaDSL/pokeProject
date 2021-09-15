@@ -16,5 +16,3 @@ const PokeList = ({ pokemons = [] }) => {
 };
 
 export default PokeList;
-//ai ta dando esse erro esquisito
-//
