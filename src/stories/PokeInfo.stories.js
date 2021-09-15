@@ -1,12 +1,12 @@
 import React from 'react';
-import PokeItem from '../components/PokeItem';
+import PokeInfo from '../components/PokeInfo';
 
 export default {
-  title: 'Components/PokeItem',
-  component: PokeItem,
+  title: 'Components/PokeInfo',
+  component: PokeInfo,
 }
 
-export const Component = (args) => <PokeItem {...args} />
+export const Component = (args) => <PokeInfo {...args} />
 
 export const Default = Component.bind({})
 
