@@ -7,6 +7,7 @@ export const Container = styled.div`
   height: 320px;
   justify-content: center;
   align-items: center;
+
   h1 {
     width: 50vw;
     background-color: #f1305a;
@@ -22,6 +23,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
   }
+  
   ul {
     list-style: none;
   }
