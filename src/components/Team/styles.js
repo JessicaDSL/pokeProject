@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
 
   h1 {
-    width: 50vw;
+    width: 70vw;
     background-color: #f1305a;
     text-align: center;
     padding-bottom: 10px;
@@ -23,22 +23,22 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
   }
-  
+
   ul {
     list-style: none;
   }
 `;
 
 export const List = styled.ul`
-  width: 50vw;
+width: 70vw;
   display: flex;
-  padding: 30px 0;
+  padding: 10px 0;
   background-color: pink;
   border-radius: 4px;
   display: flex;
   justify-content: space-around;
+  butt
 `;
-
 
 export const ListItem = styled.li`
   display: flex;
