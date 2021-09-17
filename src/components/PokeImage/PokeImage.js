@@ -1,13 +1,13 @@
 import React from "react";
 
 import { Container } from "./styles";
-import {formatPokeId} from '../../utils/utils'
+import { formatPokeId } from "../../utils/utils";
 
-const PokeImage = ({image, alt, id}) => {
+const PokeImage = ({ image, alt, id }) => {
   return (
     <Container>
       <img src={image} alt={alt} />
-      <span>{formatPokeId({id})}</span>
+      <span>{formatPokeId({ id })}</span>
     </Container>
   );
 };

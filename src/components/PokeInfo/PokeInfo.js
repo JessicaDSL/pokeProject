@@ -4,11 +4,15 @@ import PokeDescription from "../PokeDescription";
 
 import { Background } from "./styles";
 
-const PokeInfo = ({image, id, alt, name, species, type}) => {
+const PokeInfo = ({ pokeData }) => {
   return (
     <Background>
-      <PokeImage image={image} id={id} alt={alt}/>
-      <PokeDescription name={name} type={type} species={species} />
+      <PokeImage image={pokeData.image} id={pokeData.id} alt={pokeData.alt} />
+      <PokeDescription
+        name={pokeData.name}
+        type={pokeData.type}
+        species={pokeData.species}
+      />
     </Background>
   );
 };
