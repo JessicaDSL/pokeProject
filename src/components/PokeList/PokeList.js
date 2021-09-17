@@ -3,12 +3,12 @@ import React from "react";
 import { Container, List } from "./styles";
 import PokeCard from "../PokeCard";
 
-const PokeList = ({ favouritedPokemons }) => {
+const PokeList = ({ pokemons = [] }) => {
   return (
     <Container>
       <List>
-        {favouritedPokemons.map( ( pokemons ) => (
-          <PokeCard image={pokemons.image} id={pokemons.id} />
+        {pokemons.map((pokemon) => (
+          <PokeCard image={pokemon.image} id={pokemon.id} />
         ))}
       </List>
     </Container>
