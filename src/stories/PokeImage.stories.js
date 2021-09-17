@@ -6,7 +6,7 @@ export default {
   component: PokeImage
 }
 
-export const Component = (args) => <PokeImage {...args}/>
+const Component = (args) => <PokeImage {...args}/>
 
 export const Default = Component.bind({})
 

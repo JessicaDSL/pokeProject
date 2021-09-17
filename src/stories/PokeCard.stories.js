@@ -6,7 +6,7 @@ export default {
   component: PokeCard,
 };
 
-export const component = (args) => <PokeCard {...args} />;
+const component = (args) => <PokeCard {...args} />;
 
 export const Default = component.bind({});
 
@@ -16,4 +16,3 @@ Default.args = {
   id: 167,
 };
 
-export const Blank = component.bind({});

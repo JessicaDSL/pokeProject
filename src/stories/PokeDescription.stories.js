@@ -6,7 +6,7 @@ export default {
   component: PokeDescription,
 };
 
-export const Component = (args) => <PokeDescription {...args} />;
+const Component = (args) => <PokeDescription {...args} />;
 export const Default = Component.bind({});
 
 Default.args = {
@@ -15,4 +15,3 @@ Default.args = {
   species: "poison",
 };
 
-export const Blank = Component.bind({});

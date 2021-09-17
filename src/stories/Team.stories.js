@@ -7,7 +7,7 @@ export default {
   component: Team,
 };
 
-const pokemon = [
+const favouritedPokemons = [
   {
     image:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
@@ -38,9 +38,8 @@ const pokemon = [
   }
 ];
 
-export const component = (args) => <Team {...args} />;
+const component = (args) => <Team {...args} />;
 
 export const Default = component.bind({});
-Default.args = { pokemon };
+Default.args = { favouritedPokemons };
 
-export const Blank = component.bind({});

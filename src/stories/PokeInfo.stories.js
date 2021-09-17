@@ -6,7 +6,7 @@ export default {
   component: PokeInfo,
 }
 
-export const Component = (args) => <PokeInfo {...args} />
+const Component = (args) => <PokeInfo {...args} />
 
 export const Default = Component.bind({})
 

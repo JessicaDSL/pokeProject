@@ -25,9 +25,7 @@ const pokemons = [
   }
 ];
 
-export const component = (args) => <PokeList {...args} />;
+const component = (args) => <PokeList {...args} />;
 
 export const Default = component.bind({});
 Default.args = {pokemons};
-
-export const Blank = component.bind({});
