@@ -1,47 +1,49 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import { Container } from "./styles";
 import PokeInfo from "../../components/PokeInfo";
-
-import axios from "axios";
+import api from "../../services/api";
 
 const PokeAbout = () => {
   const [pokeList, setPokeList] = useState([]);
 
-  const api = axios.create({
-    baseURL: `https://pokeapi.co/api/v2`,
-  });
+  const { id } = useParams();
 
   useEffect(() => {
     api
-      .get(`/pokemon/1`)
+      .get(`/${id}`)
       .then(({ data }) => {
-        const name = data?.name
-        const id = data?.id
-        const image = `https://cdn.traction.one/pokedex/pokemon/${id}.png`
-        const species = data?.species?.name
-        const type = data?.types?.map(item => {
-          const pokeDate = item?.type?.name
-          return pokeDate
-        }).join(', ')
-        
-        console.log(name, id, 'type', type);
-        return setPokeList({name, id, image, species, type});
+        const name = data?.name;
+        const ids = data?.id;
+        const image = `https://cdn.traction.one/pokedex/pokemon/${id}.png`;
+        const ability = data?.abilities
+          ?.map((item) => {
+            const pokeDateAbility = item?.ability?.name;
+            return pokeDateAbility;
+          })
+          .join(", ");
+        const type = data?.types
+          ?.map((item) => {
+            const pokeDateType = item?.type?.name;
+            return pokeDateType;
+          })
+          .join(", ");
+        console.log(ability);
+        return setPokeList({ name, ids, image, ability, type });
       })
       .catch((err) => `deu ruim amore: ${err}`);
-
-    console.log('pokelist', pokeList);
-    
   }, []);
 
+  //
   return (
     <Container>
       <PokeInfo
         image={pokeList.image}
-        id={pokeList.id}
+        id={pokeList.ids}
         name={pokeList.name}
-        species={pokeList.species}
+        ability={pokeList.ability}
         type={pokeList.type}
       />
     </Container>
