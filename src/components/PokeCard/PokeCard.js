@@ -1,17 +1,17 @@
 import React from "react";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import { Link } from "react-router-dom";
 
 import { Container, Description } from "./styles";
-//import { formatPokeId } from "../../utils/utils";
 
 const PokeCard = ({ image, id }) => {
   return (
     <Container>
-      <div>
+      <Link to={`/pokeabout/${id}`}>
         <img src={image} alt="" />
-      </div>
+      </Link>
       <Description>
-      <span>{id}</span>
+        <span>{id}</span>
         <button>
           <FavoriteBorderIcon fontSize="large" />
         </button>
@@ -21,4 +21,3 @@ const PokeCard = ({ image, id }) => {
 };
 
 export default PokeCard;
-// 
