@@ -13,6 +13,7 @@ export const Container = styled.div`
     border-radius: 50%;
     margin-top: 10px;
     padding: 2rem;
+    width: 100px;
   }
 `;
 
