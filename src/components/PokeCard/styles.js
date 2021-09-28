@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   background: pink;
@@ -14,6 +14,7 @@ export const Container = styled.div`
     margin-top: 10px;
     padding: 2rem;
     width: 100px;
+    cursor: pointer;
   }
 `;
 
@@ -25,7 +26,7 @@ export const Description = styled.div`
   align-items: center;
   color: white;
   letter-spacing: 4px;
-  span{
+  span {
     font-size: large;
   }
   button {
