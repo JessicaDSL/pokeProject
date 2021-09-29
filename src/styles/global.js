@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import PokemonLight from "../../src/assets/font/PokemonHollow.ttf";
 import PokemonBold from "../../src/assets/font/PokemonSolid.ttf";
 
-const Global =  createGlobalStyle`
+const Global = createGlobalStyle`
   *{
     margin: 0;
     padding: 0;

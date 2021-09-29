@@ -12,8 +12,8 @@ function App() {
       <Global />
       <Header />
       <Switch>
-        <Route path="/" exact={true} component={Home} />
-        <Route path="/pokeabout" component={PokeAbout} />
+        <Route path="/" exact component={Home} />
+        <Route path="/pokeabout/:id" component={PokeAbout} />
       </Switch>
     </BrowserRouter>
   );
