@@ -7,9 +7,9 @@ import { Container, Description } from "./styles";
 const PokeCard = ({ image, id }) => {
   return (
     <Container>
-      <Link to={`/pokeabout/${id}`}>
-        <img src={image} alt="" />
-      </Link>
+        <Link to={`/pokeabout/${id}`}>
+          <img src={image} alt="" />
+        </Link>
       <Description>
         <span>{id}</span>
         <button>

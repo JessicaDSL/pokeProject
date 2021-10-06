@@ -7,8 +7,8 @@ const PokeList = ({ pokemons = [] }) => {
   return (
     <Container>
       <List>
-        {pokemons.map((pokemon) => (
-          <PokeCard image={pokemon.image} id={pokemon.id} />
+        {pokemons.map((pokemon, key) => (
+          <PokeCard image={pokemon.image} id={pokemon.id} key={key} />
         ))}
       </List>
     </Container>
