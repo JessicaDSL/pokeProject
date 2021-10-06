@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Container, Btn, Button } from "./styles";
 
-const Pagination = ({ selectedPage, setSelectedPage }) => {
-  useEffect(() => {}, [selectedPage]);
-  const pageNumber = [
+const Pagination = ({ handleChange }) => {
+  const [selectedPage, setSelectedPage] = useState(0);
+
+  const pageNumbers = [
     { id: 1 },
     { id: 2 },
     { id: 3 },
@@ -17,12 +18,18 @@ const Pagination = ({ selectedPage, setSelectedPage }) => {
     { id: 10 },
   ];
 
+  useEffect(() => {
+    handleChange(selectedPage);
+  }, [selectedPage]);
+
   function changePageNext() {
-    setSelectedPage(selectedPage + 1);
+    selectedPage >= pageNumbers.length
+      ? alert("nao da pra mudar")
+      : setSelectedPage(selectedPage + 1);
   }
 
   function changePagePrevious() {
-    return selectedPage < 0
+    selectedPage <= 1
       ? alert("nao da pra mudar")
       : setSelectedPage(selectedPage - 1);
   }
@@ -31,7 +38,7 @@ const Pagination = ({ selectedPage, setSelectedPage }) => {
     <Container>
       <Btn>
         <button onClick={() => changePagePrevious()}> &laquo; </button>
-        {pageNumber.map((item, key) => {
+        {pageNumbers.map((item, key) => {
           return (
             <Button
               selected={item.id === selectedPage}
