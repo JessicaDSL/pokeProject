@@ -10,3 +10,7 @@ export default {
 const component = (args) => <Pagination {...args} />;
 
 export const Default = component.bind({});
+
+Default.args = {
+  handleChange: console.log
+}
