@@ -16,3 +16,11 @@ Default.args = {
   id: 167,
 };
 
+export const Favorited = component.bind({});
+
+Favorited.args = {
+  image:
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+  id: 167,
+  isFavorited: true,
+};
