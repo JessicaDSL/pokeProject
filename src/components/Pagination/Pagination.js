@@ -41,6 +41,7 @@ const Pagination = ({ handleChange }) => {
         {pageNumbers.map((item, key) => {
           return (
             <Button
+              key={item.id}
               selected={item.id === selectedPage}
               onClick={() => {
                 setSelectedPage(item.id);
