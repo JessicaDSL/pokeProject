@@ -42,18 +42,17 @@ const Home = () => {
     setFavouritedPokemons(pokemons);
   }
 
-  
+  function isFavorited(pokemon) {
+    return favouritedPokemons.find((item) => item.id === pokemon.id);
+  }
+
   function handleSelect(pokemon) {
     if (favouritedPokemons.length >= 6) {
       alert("Só pode adicionar 6 pokemons");
       return;
     }
 
-    const hasPokemon = favouritedPokemons.find(
-      (item) => item.id === pokemon.id
-    );
-
-    hasPokemon
+    isFavorited(pokemon)
       ? removePokemonFromFavorite(pokemon, favouritedPokemons)
       : addPokemonToFavorite(pokemon);
   }
