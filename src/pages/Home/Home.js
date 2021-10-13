@@ -43,7 +43,10 @@ const Home = () => {
   }
 
   function isFavorited(pokemon) {
-    return favouritedPokemons.find((item) => item.id === pokemon.id);
+    const favoritedPoke = favouritedPokemons.find(
+      (item) => item.id === pokemon.id
+    );
+    return favoritedPoke;
   }
 
   function handleSelect(pokemon) {
@@ -60,7 +63,11 @@ const Home = () => {
   return (
     <Container>
       <Team pokemons={favouritedPokemons} />
-      <PokeList pokemons={listOfPokemons} handleSelect={handleSelect} />
+      <PokeList
+        pokemons={listOfPokemons}
+        handleSelect={handleSelect}
+        handleFavorited={isFavorited}
+      />
       <Pagination handleChange={fetchPokemon} />
     </Container>
   );
