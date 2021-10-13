@@ -34,6 +34,15 @@ const Home = () => {
     setFavouritedPokemons([...favouritedPokemons, pokemon]);
   }
 
+  function removePokemonFromFavorite(pokemon, favouritedPokemons) {
+    const pokemons = [...favouritedPokemons];
+    const index = pokemons.findIndex((item) => item.id === pokemon.id);
+    if (index === -1) return;
+    pokemons.splice(index, 1);
+    setFavouritedPokemons(pokemons);
+  }
+
+  
   function handleSelect(pokemon) {
     if (favouritedPokemons.length >= 6) {
       alert("Só pode adicionar 6 pokemons");
@@ -44,12 +53,9 @@ const Home = () => {
       (item) => item.id === pokemon.id
     );
 
-    if (hasPokemon) {
-      alert("Esse pokemon já foi escolhido! Tente outro!");
-      return;
-    }
-
-    addPokemonToFavorite(pokemon);
+    hasPokemon
+      ? removePokemonFromFavorite(pokemon, favouritedPokemons)
+      : addPokemonToFavorite(pokemon);
   }
 
   return (
