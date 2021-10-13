@@ -34,7 +34,7 @@ const Home = () => {
     setFavouritedPokemons([...favouritedPokemons, pokemon]);
   }
 
-  function removePokemonFromFavorite(pokemon, favouritedPokemons) {
+  function removePokemonFromFavorite(pokemon) {
     const pokemons = [...favouritedPokemons];
     const index = pokemons.findIndex((item) => item.id === pokemon.id);
     if (index === -1) return;
@@ -56,13 +56,13 @@ const Home = () => {
     }
 
     isFavorited(pokemon)
-      ? removePokemonFromFavorite(pokemon, favouritedPokemons)
+      ? removePokemonFromFavorite(pokemon)
       : addPokemonToFavorite(pokemon);
   }
 
   return (
     <Container>
-      <Team pokemons={favouritedPokemons} />
+      <Team pokemons={favouritedPokemons} handleDelete={removePokemonFromFavorite} />
       <PokeList
         pokemons={listOfPokemons}
         handleSelect={handleSelect}
