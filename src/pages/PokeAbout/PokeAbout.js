@@ -21,13 +21,24 @@ const PokeAbout = () => {
         const abilities = data?.abilities
           ?.map((item) => item?.ability?.name)
           .join(", ");
-        const types = data?.types?.map((item) => item?.type?.name).join(", ");
-        return setPokeList({ name, ids, image, abilities, types });
+        const height = data?.height;
+        const weight = data?.weight;
+        const status = data?.stats?.map((item) => item?.base_stat);
+        const types = data?.types?.map((item) => item?.type?.name);
+        return setPokeList({
+          name,
+          ids,
+          image,
+          abilities,
+          types,
+          height,
+          weight,
+          status
+        });
       })
       .catch((err) => `deu ruim amore: ${err}`);
   }, []);
 
-  //
   return (
     <Container>
       <PokeInfo
@@ -36,6 +47,9 @@ const PokeAbout = () => {
         name={pokeList.name}
         abilities={pokeList.abilities}
         types={pokeList.types}
+        height={pokeList.height}
+        weight={pokeList.weight}
+        status={pokeList.status}
       />
     </Container>
   );
