@@ -12,6 +12,7 @@ const PokeList = ({ pokemons = [], handleSelect, handleFavorited }) => {
             image={pokemon.image}
             id={pokemon.id}
             key={key}
+            name={pokemon.name}
             handleSelect={() => handleSelect(pokemon)}
             isFavorited={handleFavorited(pokemon)}
           />
