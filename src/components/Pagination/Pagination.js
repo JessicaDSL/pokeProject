@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Container, Btn, Button } from "./styles";
+import { Container, Btn, Button, BtnArrow } from "./styles";
 
 const Pagination = ({ handleChange }) => {
   const [selectedPage, setSelectedPage] = useState(0);
@@ -37,7 +37,7 @@ const Pagination = ({ handleChange }) => {
   return (
     <Container>
       <Btn>
-        <button onClick={() => changePagePrevious()}> &laquo; </button>
+        <BtnArrow onClick={() => changePagePrevious()}> &laquo; </BtnArrow>
         {pageNumbers.map((item, key) => {
           return (
             <Button
@@ -51,7 +51,7 @@ const Pagination = ({ handleChange }) => {
             </Button>
           );
         })}
-        <button onClick={() => changePageNext()}> &raquo; </button>
+        <BtnArrow onClick={() => changePageNext()}> &raquo; </BtnArrow>
       </Btn>
     </Container>
   );
