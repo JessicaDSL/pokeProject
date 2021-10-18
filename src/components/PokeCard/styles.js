@@ -13,6 +13,10 @@ export const Container = styled.div`
     position: relative;
     top: -5px;
   }
+  &:hover {
+    position: relative;
+    top: -6px;
+  }
 `;
 
 export const Description = styled.div`
