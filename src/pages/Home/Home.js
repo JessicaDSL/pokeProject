@@ -18,7 +18,7 @@ const Home = () => {
 
   const fetchPokemon = (pageNumber = 0) => {
     const offset = pageNumber === 1 ? (pageNumber = 0) : pageNumber * 9;
-    const limit = 9;
+    const limit = 15;
     return api
       .get(`?offset=${offset}&limit=${limit}`)
       .then(({ data }) => {
