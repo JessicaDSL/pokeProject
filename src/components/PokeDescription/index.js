@@ -1,3 +1,3 @@
-import PokeDescription from './PokeDescription';
+import PokeDescription from "./PokeDescriprion";
 
 export default PokeDescription;
