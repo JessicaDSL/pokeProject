@@ -1,14 +1,32 @@
 import React from "react";
-import PokeImage from "../PokeImage";
 import PokeDescription from "../PokeDescription";
+import PokeStatus from "../PokeStatus";
 
 import { Background } from "./styles";
 
-const PokeInfo = ({ image, id, name, abilities, types }) => {
+const PokeInfo = ({
+  image,
+  id,
+  name,
+  abilities,
+  height,
+  types,
+  weight,
+  status,
+}) => {
   return (
     <Background>
-      <PokeImage image={image} id={id} alt={`Foto do pokemon ${name}`} />
-      <PokeDescription name={name} types={types} abilities={abilities} />
+      <PokeDescription
+        image={image}
+        id={id}
+        alt={`Foto do pokemon ${name}`}
+        name={name}
+        types={types}
+        abilities={abilities}
+        height={height}
+        weight={weight}
+      />
+      <PokeStatus status={status} />
     </Background>
   );
 };
