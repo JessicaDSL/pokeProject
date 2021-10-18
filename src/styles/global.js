@@ -2,8 +2,14 @@ import { createGlobalStyle } from "styled-components";
 
 import PokemonLight from "../../src/assets/font/PokemonHollow.ttf";
 import PokemonBold from "../../src/assets/font/PokemonSolid.ttf";
+import Bungee from "../../src/assets/font/Bungee-Regular.ttf";
+import RobotoRegular from "../../src/assets/font/RobotoRegular.ttf";
+import RobotoBold from "../../src/assets/font/RobotoBold.ttf";
+import Righteous from "../../src/assets/font/Righteous.ttf";
 
 const Global = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
   *{
     margin: 0;
     padding: 0;
@@ -16,7 +22,7 @@ const Global = createGlobalStyle`
   }
 
   body{
-    background: #eee;
+    background: #0E111A;
   }
 
   ul {
@@ -27,10 +33,36 @@ const Global = createGlobalStyle`
     font-family: PokemonLight;
     src: url(${PokemonLight});
   }
+
   @font-face {
     font-family: PokemonBold;
     src: url(${PokemonBold});
   }
+
+  @font-face {
+  font-family: Bungee;
+  src: url(${Bungee});
+  }
+
+  @font-face {
+  font-family: RobotoRegular;
+  src: url(${RobotoRegular});
+  }
+
+  @font-face {
+  font-family: RobotoBold;
+  src: url(${RobotoBold});
+  }
+
+  @font-face {
+    font-family: Righteous;
+    src: url(${Righteous})
+  }
+
+  
+  
+  
+
 `;
 
 export default Global;
