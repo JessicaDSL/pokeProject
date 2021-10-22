@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 60px 0;
 `
 
 export const List = styled.div`
-  width: 50vw;
-  border-radius: 4px;
+  width: 72vw;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.8rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 270px 270px 270px;
+  grid-template-rows: 120px 120px 120px 120px 120px;
 `

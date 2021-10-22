@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import { Container, List, ListItem } from "./styles";
+import { Container, List, ListItem, Title } from "./styles";
 import TeamCard from "../TeamCard";
 
-const Team = ({ favouritedPokemons }) => {
+const Team = ({ pokemons = [], handleDelete }) => {
+
+  const [ state, setState ] = useState(false);
+
+  useEffect(() => {
+    function hasPokemon() {
+      if(pokemons.length < 1) {
+        setState(false)
+      } else {
+        setState(true);
+      } 
+    }
+    hasPokemon()
+  })
+  
   return (
-    <Container>
-      <h1>Meu time</h1>
-      <List>
+    <Container state={state}>
+      <Title>Meu time</Title>
+      <List >
         <ListItem>
-          {favouritedPokemons.map((pokemon) => (
-            <TeamCard image={pokemon.image} alt={pokemon.alt} />
+          {pokemons.map((pokemon, key) => (
+            <TeamCard
+              image={pokemon.image}
+              alt={pokemon.alt}
+              name={pokemon.name}
+              key={key}
+              handleDelete={() => handleDelete(pokemon)}
+            />
           ))}
         </ListItem>
       </List>

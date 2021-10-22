@@ -1,13 +1,15 @@
 import React from "react";
 
 import { Background } from "./styles";
-import Logo from "../../assets/image/pokeicon.png";
+import PokeImageRight from '../../assets/image/pokelogo1.png'
+import PokeImageLeft from '../../assets/image/pokeImageleft.png'
 
 const Header = () => {
   return (
     <Background>
-      <h2>PokeJéssy</h2>
-      <img src={Logo} alt="Icone de uma Pokebola" />
+      <img src={PokeImageLeft} alt="icone de um pokemon" />
+        <h2>PokeJessy</h2>
+      <img src={PokeImageRight} alt="icone de um pokemon" />
     </Background>
   );
 };

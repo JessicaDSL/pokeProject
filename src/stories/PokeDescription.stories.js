@@ -1,17 +1,18 @@
-import React from "react";
-import PokeDescription from "../components/PokeDescription";
+import React from 'react'
+import PokeDescription from '../components/PokeDescription'
 
 export default {
-  title: "Components/PokeDescription",
-  component: PokeDescription,
-};
+  title: 'Components/PokeDescription',
+  component: PokeDescription
+}
 
-const Component = (args) => <PokeDescription {...args} />;
-export const Default = Component.bind({});
+const Component = (args) => <PokeDescription {...args}/>
+
+export const Default = Component.bind({})
 
 Default.args = {
-  name: "Squirtle",
-  type: "blabla",
-  species: "poison",
-};
-
+  image:
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+  alt: "Foto do pokemon",
+  id: 7
+}
