@@ -1,48 +1,72 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  color: white;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: RobotoRegular;
-  color: #eff7ff;
-  letter-spacing: 3px;
+  color: #a40b33;
+  width: 35vw;
   h2 {
-    display: flex;
-    font-size: 3rem;
-    background: #f1245a;
-    border-radius: 4px;
-    padding: 15px;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
+    background: #a40b33;
+    padding: 5px 15px;
+    width: 100%;
+    color: #ffe9f3;
+    font-weight: bolder;
+    letter-spacing: 0.05rem;
+    font-size: 2rem;
+    border-radius: 7px;
   }
   span {
-    color: #556f7a;
-    letter-spacing: 0.3px;
-    margin: 70px 0;
+    color: #a40b33;
+    font-size: smaller;
   }
 `;
 
 export const List = styled.ul`
+  margin: 10px 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0
+  font-size: larger;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    progress {
+      appearance: none;
+      width: 20rem;
+      height: 18px;
+      display: flex;
+      border-radius: 50%;
+      &::-webkit-progress-bar {
+        background: #FFE9F3;
+        border-radius: 7px;
+        padding: 2px;
+      }
+      &::-moz-progress-bar {
+        background: black;
+        border-radius: 7px;
+        padding: 2px;
+      }
+      &::-webkit-progress-value {
+        border-radius: 50px;
+        background: #a40b33;
+      }
+    }
+    span {
+      width: 8rem;
+    }
+    h4 {
+      width: 14rem;
+      margin: 0 6px 0 0;
+      letter-spacing: 0.1rem;
+      font-size: 1rem;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
 `;
 
 export const ListItem = styled.li`
-  width: 80vw;
   display: flex;
-  margin: 8px 10px;
-  padding: 5px;
-  h4 {
-    font-family: RobotoBold;
-    margin: 0 5px 0 0;
-    letter-spacing: 4px;
-  }
+  flex-direction: column;
 `;
