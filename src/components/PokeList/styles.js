@@ -7,8 +7,7 @@ export const Container = styled.div`
 `
 
 export const List = styled.div`
-  width: 80vw;
-  border-radius: 4px;
+  width: 72vw;
   display: grid;
   grid-gap: 1.8rem;
   grid-template-columns: 1fr 1fr 1fr;
