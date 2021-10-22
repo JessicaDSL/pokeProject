@@ -5,39 +5,27 @@ import { Link } from "react-router-dom";
 
 import { formatPokeId } from "../../utils/utils";
 
-import { Container, Description, FavPoke } from "./styles";
+import { Container, Description } from "./styles";
 
-const PokeCard = ({
-  image,
-  id,
-  name,
-  handleSelect,
-  isFavorited = false,
-}) => {
+const PokeCard = ({ image, id, name, handleSelect, isFavorited = false }) => {
   return (
     <Container>
       <Description>
-        <div>
-          <span>N° {formatPokeId(id)}</span>
-          <h3>{name}</h3>
-        </div>
-        <FavPoke>
-          <ul>
-            <li>Fire</li>
-            <li>Water</li>
-          </ul>
-          <button onClick={handleSelect}>
-            {isFavorited ? (
-              <FavoriteIcon fontSize="large" />
-            ) : (
-              <FavoriteBorderIcon fontSize="large" />
-            )}
-          </button>
-        </FavPoke>
+        <span>N° {formatPokeId(id)}</span>
+        <h3>{name}</h3>
       </Description>
+      <div>
+        <button onClick={handleSelect}>
+          {isFavorited ? (
+            <FavoriteIcon fontSize="large" />
+          ) : (
+            <FavoriteBorderIcon fontSize="large" />
+          )}
+        </button>
       <Link to={`/pokeabout/${id}`}>
         <img src={image} alt="" />
       </Link>
+      </div>
     </Container>
   );
 };
