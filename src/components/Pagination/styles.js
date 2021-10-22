@@ -15,7 +15,7 @@ export const Btn = styled.div`
 export const Button = styled.button`
   background: ${({ selected }) => (selected ? "#F1245A" : "#F3C7CE")};
   padding: 15px;
-  color:${({ selected }) => (selected ? "#EFF7FF" : "#F1245A")};
+  color:${({ selected }) => (selected ? "#FFE9F3" : "#F1245A")};
   cursor: pointer;
   border: 0;
   width: 3.5rem;
@@ -26,7 +26,7 @@ export const Button = styled.button`
   font-weight: bold;
   &:hover {
     background-color: #F1245A;
-    color: #EFF7FF;
+    color: #FFE9F3;
     transition: .3s ease-in-out;
   }
 `;
