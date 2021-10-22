@@ -1,5 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import pokeBackground2 from '../../assets/image/pokeBackground2.png'
 
 export const Container = styled.div`
-  height: 100vh;
+  background: url(${pokeBackground2}) no-repeat 70% 25%;
+  background-size: 32rem;
 `;
