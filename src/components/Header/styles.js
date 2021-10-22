@@ -6,7 +6,7 @@ export const Background = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #EFF7FF;
+  color: #FFE9F3;
   background: #D56176;
   background-image: url(${LineL});
   font-family: PokemonLight;
