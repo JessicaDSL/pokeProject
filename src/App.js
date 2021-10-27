@@ -8,7 +8,7 @@ import Header from "../src/components/Header";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Global />
       <Header />
       <Switch>
