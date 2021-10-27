@@ -1,20 +1,16 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import Home from "./pages/Home";
-import PokeAbout from "./pages/PokeAbout";
 import Global from "../src/styles/global";
 import Header from "../src/components/Header";
+import Routes from './routes'
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Global />
       <Header />
-      <Switch>
-        <Route path="/pokeProject/" exact component={Home} />
-        <Route path="/pokeProject/pokeabout/:id" component={PokeAbout} />
-      </Switch>
+      <Routes />
     </BrowserRouter>
   );
 }
