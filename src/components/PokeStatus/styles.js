@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Container = styled.div`
   color: #a40b33;
   width: 35vw;
+
   h2 {
     background: #a40b33;
     padding: 5px 15px;
@@ -13,10 +15,21 @@ export const Container = styled.div`
     font-size: 2rem;
     border-radius: 7px;
   }
+
   span {
     color: #a40b33;
     font-size: smaller;
   }
+
+  ${media.lessThan("medium")`
+  width: 80vw;
+  margin: 1rem 0 0 0;
+  `}
+
+  ${media.between("medium", "large")`
+  width: 80vw;
+  margin: 1rem 0 0 0;
+  `}
 `;
 
 export const List = styled.ul`
@@ -24,6 +37,7 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   font-size: larger;
+
   div {
     display: flex;
     justify-content: space-between;
@@ -37,7 +51,7 @@ export const List = styled.ul`
       display: flex;
       border-radius: 50%;
       &::-webkit-progress-bar {
-        background: #FFE9F3;
+        background: #ffe9f3;
         border-radius: 7px;
         padding: 2px;
       }

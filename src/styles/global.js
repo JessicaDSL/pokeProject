@@ -6,6 +6,7 @@ import Bungee from "../../src/assets/font/Bungee-Regular.ttf";
 import RobotoRegular from "../../src/assets/font/RobotoRegular.ttf";
 import RobotoBold from "../../src/assets/font/RobotoBold.ttf";
 import Righteous from "../../src/assets/font/Righteous.ttf";
+import PokeBackground from '../../src/assets/image/pokerbackground.png'
 
 const Global = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
@@ -22,7 +23,7 @@ const Global = createGlobalStyle`
   }
 
   body{
-    background: #FFE9F3;
+    background: url(${PokeBackground});
   }
 
   ul {
