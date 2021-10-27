@@ -22,9 +22,9 @@ const PokeCard = ({ image, id, name, handleSelect, isFavorited = false }) => {
             <FavoriteBorderIcon fontSize="large" />
           )}
         </button>
-      <Link to={`/pokeabout/${id}`}>
-        <img src={image} alt="" />
-      </Link>
+        <Link to={`/pokeabout/${id}`}>
+          <img src={image} alt="" />
+        </Link>
       </div>
     </Container>
   );

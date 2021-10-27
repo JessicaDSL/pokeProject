@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import media from "styled-media-query";
+
 import pokeBackground from "../../assets/image/pokeBackground.png";
 
 export const Container = styled.div`
@@ -7,6 +9,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   border-radius: 7px;
+
   img {
     width: 8.3rem;
     cursor: pointer;
@@ -17,19 +20,42 @@ export const Container = styled.div`
   div {
     display: flex;
     button {
-      background: blue;
       margin: 3.5rem 0 0 0;
       cursor: pointer;
       border: 0;
       background: none;
       color: #a40b33;
-      padding: 20px;
     }
   }
+
   &:hover {
-      position: relative;
-      top: -6px;
+    position: relative;
+    top: -6px;
+  }
+
+  ${media.lessThan("small")`
+  display: flex;
+  button {
+    padding:5px;
+  }
+  img {
+    width: 8rem;
+  }
+`}
+
+  ${media.between("small", "medium")`
+  display: flex;
+  img {
+    width: 8rem;
     }
+    h2 {
+      font-size: 5rem;
+    }
+  `}
+
+  ${media.between("medium", "large")`
+  display: flex;
+  `}
 `;
 
 export const Description = styled.div`
@@ -37,7 +63,8 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
   color: #a40b33;
-  margin: 0 0 0 0.8rem;
+  padding: 0 0 0 0.8rem;
+
   h3 {
     font-family: RobotoRegular;
     font-size: 1.7rem;
@@ -47,9 +74,26 @@ export const Description = styled.div`
       text-transform: uppercase;
     }
   }
+
   span {
     font-size: large;
     font-weight: lighter;
     color: #a40b33;
   }
+
+  ${media.lessThan("small")`
+  justify-content: center;
+  span{
+    padding: 3rem 0 0 0;
+    font-size: .9rem;
+  } 
+  h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  `}
+
+  ${media.between("medium", "large")`
+  display: flex;
+  `}
 `;
