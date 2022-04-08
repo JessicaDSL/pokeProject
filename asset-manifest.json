@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.js": "/pokeProject/static/js/main.973b66e2.chunk.js",
-    "main.js.map": "/pokeProject/static/js/main.973b66e2.chunk.js.map",
-    "runtime-main.js": "/pokeProject/static/js/runtime-main.fb5a521a.js",
-    "runtime-main.js.map": "/pokeProject/static/js/runtime-main.fb5a521a.js.map",
-    "static/js/2.a0945998.chunk.js": "/pokeProject/static/js/2.a0945998.chunk.js",
-    "static/js/2.a0945998.chunk.js.map": "/pokeProject/static/js/2.a0945998.chunk.js.map",
-    "index.html": "/pokeProject/index.html",
-    "static/js/2.a0945998.chunk.js.LICENSE.txt": "/pokeProject/static/js/2.a0945998.chunk.js.LICENSE.txt",
-    "static/media/Bungee-Regular.b99ce5d9.ttf": "/pokeProject/static/media/Bungee-Regular.b99ce5d9.ttf",
-    "static/media/PokemonHollow.47f77ce9.ttf": "/pokeProject/static/media/PokemonHollow.47f77ce9.ttf",
-    "static/media/PokemonSolid.5d60be1f.ttf": "/pokeProject/static/media/PokemonSolid.5d60be1f.ttf",
-    "static/media/Righteous.fd011047.ttf": "/pokeProject/static/media/Righteous.fd011047.ttf",
-    "static/media/RobotoBold.75371f53.ttf": "/pokeProject/static/media/RobotoBold.75371f53.ttf",
-    "static/media/RobotoRegular.a8d6ac03.ttf": "/pokeProject/static/media/RobotoRegular.a8d6ac03.ttf",
-    "static/media/pokeBackground.793e8233.png": "/pokeProject/static/media/pokeBackground.793e8233.png",
-    "static/media/pokeBackground2.f99fd8cb.png": "/pokeProject/static/media/pokeBackground2.f99fd8cb.png",
-    "static/media/pokeImageleft.27ac62a7.png": "/pokeProject/static/media/pokeImageleft.27ac62a7.png",
-    "static/media/pokelogo1.eae4bc53.png": "/pokeProject/static/media/pokelogo1.eae4bc53.png",
-    "static/media/pokerbackground.92c1d8b0.png": "/pokeProject/static/media/pokerbackground.92c1d8b0.png"
+    "main.js": "/pokeproject/static/js/main.3109beb9.chunk.js",
+    "main.js.map": "/pokeproject/static/js/main.3109beb9.chunk.js.map",
+    "runtime-main.js": "/pokeproject/static/js/runtime-main.20769c0f.js",
+    "runtime-main.js.map": "/pokeproject/static/js/runtime-main.20769c0f.js.map",
+    "static/js/2.614f4f95.chunk.js": "/pokeproject/static/js/2.614f4f95.chunk.js",
+    "static/js/2.614f4f95.chunk.js.map": "/pokeproject/static/js/2.614f4f95.chunk.js.map",
+    "index.html": "/pokeproject/index.html",
+    "static/js/2.614f4f95.chunk.js.LICENSE.txt": "/pokeproject/static/js/2.614f4f95.chunk.js.LICENSE.txt",
+    "static/media/Bungee-Regular.b99ce5d9.ttf": "/pokeproject/static/media/Bungee-Regular.b99ce5d9.ttf",
+    "static/media/PokemonHollow.47f77ce9.ttf": "/pokeproject/static/media/PokemonHollow.47f77ce9.ttf",
+    "static/media/PokemonSolid.5d60be1f.ttf": "/pokeproject/static/media/PokemonSolid.5d60be1f.ttf",
+    "static/media/Righteous.fd011047.ttf": "/pokeproject/static/media/Righteous.fd011047.ttf",
+    "static/media/RobotoBold.75371f53.ttf": "/pokeproject/static/media/RobotoBold.75371f53.ttf",
+    "static/media/RobotoRegular.a8d6ac03.ttf": "/pokeproject/static/media/RobotoRegular.a8d6ac03.ttf",
+    "static/media/pokeBackground.793e8233.png": "/pokeproject/static/media/pokeBackground.793e8233.png",
+    "static/media/pokeBackground2.f99fd8cb.png": "/pokeproject/static/media/pokeBackground2.f99fd8cb.png",
+    "static/media/pokeImageleft.27ac62a7.png": "/pokeproject/static/media/pokeImageleft.27ac62a7.png",
+    "static/media/pokelogo1.eae4bc53.png": "/pokeproject/static/media/pokelogo1.eae4bc53.png",
+    "static/media/pokerbackground.92c1d8b0.png": "/pokeproject/static/media/pokerbackground.92c1d8b0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.fb5a521a.js",
-    "static/js/2.a0945998.chunk.js",
-    "static/js/main.973b66e2.chunk.js"
+    "static/js/runtime-main.20769c0f.js",
+    "static/js/2.614f4f95.chunk.js",
+    "static/js/main.3109beb9.chunk.js"
   ]
 }
