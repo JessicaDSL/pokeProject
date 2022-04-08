@@ -20,7 +20,7 @@ const Pagination = ({ handleChange }) => {
 
   useEffect(() => {
     handleChange(selectedPage);
-  }, [selectedPage]);
+  }, [selectedPage, handleChange]);
 
   function changePageNext() {
     selectedPage >= pageNumbers.length

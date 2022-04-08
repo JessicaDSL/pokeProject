@@ -12,7 +12,9 @@ const PokeCard = ({ image, id, name, handleSelect, isFavorited = false }) => {
     <Container>
       <Description>
         <span>N° {formatPokeId(id)}</span>
-        <h3>{name}</h3>
+        <Link to={`/pokeabout/${id}`}>
+          <h3>{name}</h3>
+        </Link>
       </Description>
       <div>
         <button onClick={handleSelect}>

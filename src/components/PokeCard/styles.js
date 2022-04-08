@@ -65,7 +65,9 @@ export const Description = styled.div`
   color: #a40b33;
   padding: 0 0 0 0.8rem;
 
-  h3 {
+  a{
+    color: #a40b33;
+    h3 {
     font-family: RobotoRegular;
     font-size: 1.7rem;
     font-weight: bold;
@@ -73,6 +75,7 @@ export const Description = styled.div`
     &::first-letter {
       text-transform: uppercase;
     }
+  }
   }
 
   span {
