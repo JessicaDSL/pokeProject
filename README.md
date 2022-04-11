@@ -2,7 +2,7 @@
 
 Projeto focado no estudo do consumo de API
 
-Link para o projeto [PokeJessy](https://jessicadsl.github.io/pokeProject/)
+Link para o projeto [PokeJessy](https://jessicadsl.github.io/pokeproject/)
 
 
 ## Sobre o Projeto
