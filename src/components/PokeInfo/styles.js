@@ -2,7 +2,7 @@ import styled from "styled-components";
 import media from "styled-media-query";
 
 export const Container = styled.div`
-  margin: 2.5rem 0 0 0;
+  margin: 2.5rem 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ export const Container = styled.div`
   `}
 `;
 
-export const Background = styled.div`
+export const Content = styled.div`
   margin: 0 10rem 0 12rem;
   border-radius: 7px;
   padding: 20px;
@@ -37,6 +37,7 @@ export const Background = styled.div`
   background: pink;
 
   ${media.lessThan("medium")`
+  background: pink;
   width: 94vw;
   margin: 0;
   img {
@@ -47,6 +48,7 @@ export const Background = styled.div`
   ${media.between("medium", "large")`
   width: 94vw;
   margin: 0;
+  background: pink;
     img {
       width: 14rem;
     }
@@ -63,31 +65,32 @@ export const Image = styled.div`
     margin: 5rem 0 0 0;
   }
 
-  ${media.lessThan("medium")`
-  background: pink;
+  ${media.lessThan("767px")`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 16rem;
+    min-height: 12rem;
+    background: pink;
     img {
-      width: 13rem;
+      height: 8rem;
+      width: 8rem;
       position: static;
-      margin: 2rem 0 0 0;
+      margin: 1rem 0;
     }
   `}
 
-  ${media.between("medium", "large")`
-  background: pink;
+  ${media.between("768px", "large")`
+    background: pink;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 16rem;
+    min-height: 16rem;
     img {
-      width: 13rem;
+      width: 10rem;
       position: static;
-      margin: 2rem 0 0 0;
+      margin: 2rem 0;
     }
   `}
 
@@ -99,7 +102,7 @@ export const Image = styled.div`
   `}
 `;
 
-export const Box = styled.div`
+export const Separator = styled.div`
   height: 10px;
   width: 100%;
   background: pink;
@@ -109,3 +112,15 @@ export const Box = styled.div`
     display: none;
   `}
 `;
+
+
+export const Button = styled.button`
+  background-color: #a40b33;
+  color: #fff;
+  font-weight: 700;
+  font-size: large;
+  border: none;
+  border-radius: 7px;
+  padding: .5rem 2rem;
+  margin: 1rem 0;
+`
