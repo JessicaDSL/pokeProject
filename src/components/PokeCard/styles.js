@@ -9,25 +9,18 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   border-radius: 7px;
-
   img {
     width: 8.3rem;
+    height: 7rem;
     cursor: pointer;
     position: relative;
     margin: 0 1rem 0 0;
-  }
-
-  div {
-    display: flex;
-    button {
-      margin: 3.5rem 0 0 0;
-      cursor: pointer;
-      border: 0;
-      background: none;
-      color: #a40b33;
+    backdrop-filter: saturate(80%);
+    transition: all .3s ease;
+    &:hover {
+      transform: scale(1.3);
     }
   }
-
   &:hover {
     position: relative;
     top: -6px;
@@ -36,10 +29,9 @@ export const Container = styled.div`
   ${media.lessThan("small")`
   display: flex;
   button {
-    padding:5px;
   }
   img {
-    width: 8rem;
+    width: 5.5rem;
   }
 `}
 
@@ -47,9 +39,6 @@ export const Container = styled.div`
   display: flex;
   img {
     width: 8rem;
-    }
-    h2 {
-      font-size: 5rem;
     }
   `}
 
@@ -62,21 +51,14 @@ export const Description = styled.div`
   font-family: RobotoRegular;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: #a40b33;
   padding: 0 0 0 0.8rem;
-
+  min-height: 6rem;
   a{
     color: #a40b33;
-    h3 {
-    font-family: RobotoRegular;
-    font-size: 1.7rem;
-    font-weight: bold;
-    margin: 1.5rem 0 0 0;
-    &::first-letter {
-      text-transform: uppercase;
-    }
   }
-  }
+  
 
   span {
     font-size: large;
@@ -84,19 +66,41 @@ export const Description = styled.div`
     color: #a40b33;
   }
 
-  ${media.lessThan("small")`
+`;
+
+export const Content = styled.div`
+  display: flex;
   justify-content: center;
-  span{
-    padding: 3rem 0 0 0;
-    font-size: .9rem;
-  } 
+  align-items: center;
   h3 {
-    font-size: 1.2rem;
-    margin: 0;
+    font-family: RobotoRegular;
+    font-size: 1.5rem;
+    font-weight: bold;
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
+
+  button {
+      cursor: pointer;
+      border: 0;
+      background: none;
+      color: #a40b33;
+      margin: 0 0 0 1rem;
+    }
+
+  ${media.lessThan("767px")`
+    display: flex;
+    h3 {
+      font-size: large;
+    }
+    img {
+      width: 5.6rem;
+    }
+    button {
+      margin: 0 0 0 .5rem;
+    }
   `}
 
-  ${media.between("medium", "large")`
-  display: flex;
-  `}
-`;
+`
+
