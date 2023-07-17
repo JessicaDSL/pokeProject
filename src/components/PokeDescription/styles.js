@@ -24,7 +24,7 @@ export const Container = styled.div`
     letter-spacing: 0.1rem;
     font-size: 1rem;
   }
-  p {
+  div {
     display: flex;
     margin: 0 0 12px 15px;
   }
