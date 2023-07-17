@@ -18,6 +18,7 @@ Este projeto é uma plataforma para listar e visualizar pokemons, foi criado par
 
 To-Do
 
-- [ ] Criação de paginação com as paginas completas da api
-- [ ] Correção das imagens
+- [x] Criação de paginação com as paginas completas da api
+- [ ] Criar botão de anterior e proximo na paginação
+- [x] Correção das imagens
 - [ ] Criaçao de variaveis para identificar os tipos de pokemon na descrição
