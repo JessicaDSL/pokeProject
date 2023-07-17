@@ -2,6 +2,8 @@
 
 Projeto focado no estudo do consumo de API
 
+:construction: Projeto em construção :construction:
+
 Link para o projeto [PokeJessy](https://jessicadsl.github.io/pokeproject/)
 
 
@@ -13,3 +15,9 @@ Este projeto é uma plataforma para listar e visualizar pokemons, foi criado par
 ### Demonstração do Projeto:
 
 ![alt-text](https://media.giphy.com/media/VF54I9j5JMOur9SNjj/giphy.gif)
+
+To-Do
+
+- [ ] Criação de paginação com as paginas completas da api
+- [ ] Correção das imagens
+- [ ] Criaçao de variaveis para identificar os tipos de pokemon na descrição
