@@ -1,17 +1,18 @@
 import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
-import { Container, Description } from "./styles";
+import { Container, Description, DeleteButton } from "./styles";
 
-const TeamCard = ({ image, alt, name, handleDelete }) => {
+const TeamCard = ({ image, alt, name, handleDelete, id }) => {
   return (
     <Container>
-      <img src={image} alt={alt} />
-      <Description>
-        <h3>{name}</h3>
-        <button onClick={handleDelete}>
-          <DeleteIcon />
-        </button>
-      </Description>
+      <DeleteButton onClick={handleDelete}>
+        <DeleteIcon />
+      </DeleteButton>
+      <img
+        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`}
+        alt=""
+      />
+      <h3>{name}</h3>
     </Container>
   );
 };
