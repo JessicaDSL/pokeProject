@@ -33,7 +33,8 @@ const Pagination = ({
     console.log("page aqui", page);
     getCurrentPage(Number(page));
   }
-
+console.log(totalPages);
+console.log(arrayTotalPages);
   return (
     <Container>
       {currentPage > 0 && (
@@ -50,7 +51,7 @@ const Pagination = ({
           </Button>
         );
       })}
-      {currentPage > totalPages && (
+      {currentPage < totalPages && (
         <BtnArrow onClick={() => changePageNext()}> &raquo; </BtnArrow>
       )}
     </Container>
