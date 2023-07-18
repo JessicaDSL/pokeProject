@@ -113,7 +113,6 @@ export const Separator = styled.div`
   `}
 `;
 
-
 export const Button = styled.button`
   background-color: #a40b33;
   color: #fff;
@@ -121,6 +120,6 @@ export const Button = styled.button`
   font-size: large;
   border: none;
   border-radius: 7px;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   margin: 1rem 0;
-`
+`;
