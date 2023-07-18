@@ -18,7 +18,6 @@ const PokeAbout = () => {
       .then(({ data }) => {
         const name = data?.name;
         const id = data?.id;
-        const image = `https://cdn.traction.one/pokedex/pokemon/${id}.png`;
         const abilities = data?.abilities
           ?.map((item) => item?.ability?.name)
           .join(", ");
@@ -33,7 +32,6 @@ const PokeAbout = () => {
         return setPokeList({
           name,
           id,
-          image,
           abilities,
           types,
           height,
