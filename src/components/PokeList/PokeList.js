@@ -9,7 +9,6 @@ const PokeList = ({ pokemons = [], handleSelect, handleFavorited }) => {
       <List>
         {pokemons.map((pokemon, key) => (
           <PokeCard
-            image={pokemon.image}
             id={pokemon.id}
             key={key}
             name={pokemon.name}
