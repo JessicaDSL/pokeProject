@@ -6,15 +6,13 @@ const PokeStatus = ({ status = [] }) => {
   const maxValue = 200;
   const maxValueTotal = maxValue * 6;
 
-  //const value = status?.map(item => item?.status)?.reduce((total = 0 , item = 0) => total += item)
-
   return (
     <Container>
       <h2>Base Status</h2>
       <List>
         <ListItem>
-          {status.map((item) => (
-            <div>
+          {status.map((item, index) => (
+            <div key={index}>
               <h4>{item.statusName}</h4> <span>{item.status}</span>
               <progress value={item.status} max={maxValue}></progress>
             </div>
@@ -36,12 +34,3 @@ const PokeStatus = ({ status = [] }) => {
 };
 
 export default PokeStatus;
-
-/*<div>
-                  <h4>HP{attributes}</h4> {item}
-                  <progress value={item} max={maxValue}></progress>
-                </div>*/
-
-/*<div>
-        
-      </div>*/
