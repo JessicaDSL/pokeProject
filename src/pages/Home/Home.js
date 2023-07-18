@@ -6,29 +6,28 @@ import { formatPokeList } from "../../utils/utils";
 import PokeList from "../../components/PokeList";
 import Pagination from "../../components/Pagination";
 import Team from "../../components/Team";
-import api from "../../services/api";
 
 const Home = () => {
   const [listOfPokemons, setListOfPokemons] = useState([{}]);
   const [favouritedPokemons, setFavouritedPokemons] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [countPages, setCountPages] = useState(1);
+  const limitePages = 15;
+
+  const fetchPokemon = async () => {
+    let offset = currentPage * 15;
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limitePages}`
+    );
+    const data = await response.json();
+    const formatPoke = data.results.map(formatPokeList);
+    setListOfPokemons(formatPoke);
+    setCountPages(data.count);
+  };
 
   useEffect(() => {
     fetchPokemon();
-  }, []);
-
-  const fetchPokemon = (pageNumber = 0) => {
-    const offset = pageNumber === 1 ? (pageNumber = 0) : pageNumber * 9;
-    const limit = 15;
-    return api
-      .get(`?offset=${offset}&limit=${limit}`)
-      .then(({ data }) => {
-        const pokemons = data?.results.map(formatPokeList);
-        return setListOfPokemons(pokemons);
-      })
-      .catch((err) => {
-        console.log("Vish! deu um erroMon" + err);
-      });
-  };
+  }, [currentPage]);
 
   function addPokemonToFavorite(pokemon) {
     setFavouritedPokemons([...favouritedPokemons, pokemon]);
@@ -60,15 +59,30 @@ const Home = () => {
       : addPokemonToFavorite(pokemon);
   }
 
+  function getCurrentPage(page) {
+    console.log("page:", page);
+    setCurrentPage(page - 1);
+  }
+
   return (
     <Container>
-      <Team pokemons={favouritedPokemons} handleDelete={removePokemonFromFavorite} />
+      <Team
+        pokemons={favouritedPokemons}
+        handleDelete={removePokemonFromFavorite}
+      />
       <PokeList
         pokemons={listOfPokemons}
         handleSelect={handleSelect}
         handleFavorited={isFavorited}
       />
-      <Pagination handleChange={fetchPokemon} />
+      <Pagination
+        handleChange={fetchPokemon}
+        countPages={countPages}
+        limitePages={limitePages}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+        getCurrentPage={getCurrentPage}
+      />
     </Container>
   );
 };
