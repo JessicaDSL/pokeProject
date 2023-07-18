@@ -4,7 +4,7 @@ import media from "styled-media-query";
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 60px 0;
+  margin: 2rem 0 0 0;
 `;
 
 export const List = styled.div`
@@ -14,18 +14,18 @@ export const List = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 120px 120px 120px 120px 120px;
 
-  @media (max-width: 750px) {
+  @media (max-width: 650px) {
     display: grid;
     grid-gap: 1.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: 120px;
   }
 
-  @media (min-width: 750px) and (max-width: 768px) {
+  @media (min-width: 651px) and (max-width: 768px) {
     display: grid;
     grid-gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px 120px;
+    grid-template-rows: 120px 120px; 
   }
 
   ${media.greaterThan("large")`
