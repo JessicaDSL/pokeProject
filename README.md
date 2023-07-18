@@ -20,3 +20,4 @@ To-Do
 - [x] Criar botão de anterior e proximo na paginação
 - [x] Correção das imagens
 - [x] Tirar a seta de anterior quando estiver no numero 1 e no ultimo numero(paginação)
+- [ ] Adicionar barra de Search
