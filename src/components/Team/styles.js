@@ -4,8 +4,8 @@ import media from "styled-media-query";
 export const Container = styled.div`
   display: ${({ state }) => (state ? "flex" : "none")};
   flex-direction: column;
-  margin: 2rem 0 0px 0;
-
+  margin: 1rem 0 0 0;
+  
   ul {
     list-style: none;
   }
@@ -14,12 +14,8 @@ export const Container = styled.div`
     transition: transform 0.7s ease;
   }
 
-  ${media.lessThan("small")`
-    width: 96vw;
-  `}
-
   ${media.between("small", "medium")`
-    width: 94vw;
+    width: 96vw;
     padding: 1rem 0;
   `}
 
@@ -34,94 +30,40 @@ export const Container = styled.div`
 
 
 export const List = styled.ul`
-  width: 94vw;
+  width: 96vw;
   background-color: #f3c7ce;
   border-radius: 0 0 10px 10px;
-  padding: 5rem 18px;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-
-  ${media.lessThan("small")`
-    width: 96vw;
-    padding: .5rem 0;
-  `}
-
-  ${media.between("small", "medium")`
-    width: 94vw;
-    padding: 2rem 0;
-  `}
-
-  ${media.between("medium", "large")`
-    padding: 2rem 0;
-    display: flex;
-    justify-content: center;
-  `}
-
-  ${media.between("large", "huge")`
-    padding: 2rem 0;
-    display: flex;
-    justify-content: center;
-  `}
-
-  ${media.greaterThan("huge")`
-    padding: 2.5rem 0;
-    display: flex;
-    justify-content: center;
-  `}
-`;
+`; 
 
 export const ListItem = styled.li`
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  margin: 2px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 1rem 0;
 
-  ${media.lessThan("small")`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  `}
-
-  ${media.between("small", "medium")`
+  ${media.between("700px", "1100px")`
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 90%;
   `}
 
-  ${media.between("medium", "large")`
+
+  ${media.greaterThan("1101px")`
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 92vw;
-  `}
-
-  ${media.between("large", "huge")`
-  display: flex;
-  justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 92vw;
-  `}
-
-  ${media.between("1440px", "1700px")`
-  display: flex;
-  justify-content: center;
-  `}
-
-  ${media.greaterThan("1700px")`
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 92vw;
+    width: 100%;
   `}
 `;
 
 export const Title = styled.div`
-  width: 94vw;
+  width: 96vw;
   background-color: #d56176;
   font-family: Bungee;
   color: pink;
@@ -132,15 +74,12 @@ export const Title = styled.div`
   text-align: center;
   padding-bottom: 18px;
 
-  ${media.lessThan("small")`
-  width: 96vw;
-  `}
 `;
 
 export const Content = styled.div`
   height: 1px;
   display: none;
-  margin: 4rem 0 0 0;
+  margin: 2rem 0 0 0;
   hr {
     width: 8rem;
     height: 1.5px;
@@ -164,7 +103,7 @@ export const Content = styled.div`
   align-items: center;
   border: 0;
   height: .5px;
-  margin: 5rem 0 0 0;
+  margin: 2.5rem 0 0 0;
   `}
 
   ${media.between("medium", "large")`

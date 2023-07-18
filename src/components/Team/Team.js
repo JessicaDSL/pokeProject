@@ -35,6 +35,7 @@ const Team = ({ pokemons = [], handleDelete }) => {
                 alt={pokemon.alt}
                 name={pokemon.name}
                 key={key}
+                id={pokemon.id}
                 handleDelete={() => handleDelete(pokemon)}
               />
             ))}
@@ -46,7 +47,7 @@ const Team = ({ pokemons = [], handleDelete }) => {
         <hr />
       </Content>
     </Container>
-  );
+  ); 
 };
 
 export default Team;
