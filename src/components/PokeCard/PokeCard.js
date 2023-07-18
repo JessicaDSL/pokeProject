@@ -11,15 +11,13 @@ const PokeCard = ({ id, name, handleSelect, isFavorited = false }) => {
 
   useEffect(() => {
     id <= 649
-    ? setPokeImage(
-        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
-      )
-    : setPokeImage(
-        `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
-      );
-  }, [id])
-
-  //console.log(testImg);
+      ? setPokeImage(
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
+        )
+      : setPokeImage(
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
+        );
+  }, [id]);
 
   return (
     <Container>

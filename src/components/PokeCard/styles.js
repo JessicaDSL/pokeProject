@@ -16,7 +16,7 @@ export const Container = styled.div`
     position: relative;
     margin: 0 1rem 0 0;
     backdrop-filter: saturate(80%);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     &:hover {
       transform: scale(1.3);
     }
@@ -55,17 +55,15 @@ export const Description = styled.div`
   color: #a40b33;
   padding: 0 0 0 0.8rem;
   min-height: 6rem;
-  a{
+  a {
     color: #a40b33;
   }
-  
 
   span {
     font-size: large;
     font-weight: lighter;
     color: #a40b33;
   }
-
 `;
 
 export const Content = styled.div`
@@ -82,12 +80,12 @@ export const Content = styled.div`
   }
 
   button {
-      cursor: pointer;
-      border: 0;
-      background: none;
-      color: #a40b33;
-      margin: 0 0 0 1rem;
-    }
+    cursor: pointer;
+    border: 0;
+    background: none;
+    color: #a40b33;
+    margin: 0 0 0 1rem;
+  }
 
   ${media.lessThan("767px")`
     display: flex;
@@ -101,6 +99,4 @@ export const Content = styled.div`
       margin: 0 0 0 .5rem;
     }
   `}
-
-`
-
+`;
