@@ -26,6 +26,10 @@ const Global = createGlobalStyle`
     background: url(${PokeBackground});
   }
 
+  button {
+    cursor: pointer;
+  }
+  
   ul {
     list-style: none;
   }
@@ -59,10 +63,6 @@ const Global = createGlobalStyle`
     font-family: Righteous;
     src: url(${Righteous})
   }
-
-  
-  
-  
 
 `;
 
