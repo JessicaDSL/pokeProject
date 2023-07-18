@@ -49,7 +49,7 @@ export const BtnArrow = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   &:hover {
     background-color: pink;
     transition: 0.2s ease-in-out;
