@@ -15,7 +15,7 @@ const PokeCard = ({ id, name, handleSelect, isFavorited = false }) => {
           `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`
         )
       : setPokeImage(
-          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${id}.png`
+          `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/${id}.png`
         );
   }, [id]);
 
