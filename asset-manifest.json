@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/pokeproject/static/js/main.805fee88.js",
+    "main.js": "/pokeproject/static/js/main.2bd3ce09.js",
     "static/media/RobotoRegular.ttf": "/pokeproject/static/media/RobotoRegular.a8d6ac03c7b96b7acb62.ttf",
     "static/media/RobotoBold.ttf": "/pokeproject/static/media/RobotoBold.75371f53f06181df75f1.ttf",
     "static/media/pokeImageleft.png": "/pokeproject/static/media/pokeImageleft.27ac62a7944e3af96fe6.png",
@@ -13,9 +13,9 @@
     "static/media/pokeBackground.png": "/pokeproject/static/media/pokeBackground.793e8233619c9a054af2.png",
     "static/media/PokemonSolid.ttf": "/pokeproject/static/media/PokemonSolid.5d60be1f7ff5fcc21fc1.ttf",
     "index.html": "/pokeproject/index.html",
-    "main.805fee88.js.map": "/pokeproject/static/js/main.805fee88.js.map"
+    "main.2bd3ce09.js.map": "/pokeproject/static/js/main.2bd3ce09.js.map"
   },
   "entrypoints": [
-    "static/js/main.805fee88.js"
+    "static/js/main.2bd3ce09.js"
   ]
 }
