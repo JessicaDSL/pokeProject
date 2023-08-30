@@ -20,6 +20,7 @@ To-Do
 - [x] Criar botão de anterior e proximo na paginação
 - [x] Correção das imagens
 - [x] Tirar a seta de anterior quando estiver no numero 1 e no ultimo número(paginação)
+- [x] Add Loading no Async/Await
 - [ ] Adicionar barra de Search
 - [ ] Adicionar numero da pagina a url do site
 - [ ] Fixar a imagem quando retornar null(404), mudar o link
