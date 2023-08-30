@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import { formatPokeId } from "../../utils/utils";
 
 import { Container, Description, Content } from "./styles";
-const PokeCard = ({ id, name, handleSelect, isFavorited = false }) => {
+import PokeLoading from "../PokeLoading/PokeLoading";
+const PokeCard = ({ id, name, isLoading, handleSelect, isFavorited = false }) => {
   const [pokeImage, setPokeImage] = useState("");
+  
 
   useEffect(() => {
     id <= 649
@@ -21,26 +23,32 @@ const PokeCard = ({ id, name, handleSelect, isFavorited = false }) => {
 
   return (
     <Container>
-      <Description>
-        <span>N° {formatPokeId(id)}</span>
-        <Content>
-          <Link to={`/pokeabout/${id}`}>
-            <h3>{name}</h3>
-          </Link>
-          <button onClick={handleSelect}>
-            {isFavorited ? (
-              <FavoriteIcon fontSize="large" />
-            ) : (
-              <FavoriteBorderIcon fontSize="large" />
-            )}
-          </button>
-        </Content>
-      </Description>
-      <div>
-        <Link to={`/pokeabout/${id}`}>
-          <img src={pokeImage} alt="" />
-        </Link>
-      </div>
+      {isLoading ? (
+        <PokeLoading active={isLoading} />
+      ) : (
+        <>
+          <Description loading={isLoading} >
+            <span>N° {formatPokeId(id)}</span>
+            <Content>
+              <Link to={`/pokeabout/${id}`}>
+                <h3>{name}</h3>
+              </Link>
+              <button onClick={handleSelect}>
+                {isFavorited ? (
+                  <FavoriteIcon fontSize="large" />
+                ) : (
+                  <FavoriteBorderIcon fontSize="large" />
+                )}
+              </button>
+            </Content>
+          </Description>
+          <div>
+            <Link to={`/pokeabout/${id}`}>
+              <img src={pokeImage} alt="" />
+            </Link>
+          </div>
+        </>
+      )}
     </Container>
   );
 };

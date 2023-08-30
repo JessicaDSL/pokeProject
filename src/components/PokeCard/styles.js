@@ -1,7 +1,49 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import media from "styled-media-query";
 
 import pokeBackground from "../../assets/image/pokeBackground.png";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+
+export const LoadingOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+
+  ${props =>
+    props.active &&
+    css`
+      display: flex;
+    `}
+`;
+
+export const ApiDataContainer = styled.div`
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  ${props =>
+    props.loading &&
+    css`
+      opacity: 0.5;
+    `}
+`;
+
+
 
 export const Container = styled.div`
   background: url(${pokeBackground}) no-repeat center right pink;

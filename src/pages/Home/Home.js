@@ -12,10 +12,15 @@ const Home = () => {
   const [favouritedPokemons, setFavouritedPokemons] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [countPages, setCountPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
   const limitePages = 15;
+  let offset = currentPage * limitePages;
 
   const fetchPokemon = async () => {
-    let offset = currentPage * 15;
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    setIsLoading(true);
+
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limitePages}`
     );
@@ -23,11 +28,20 @@ const Home = () => {
     const formatPoke = data.results.map(formatPokeList);
     setListOfPokemons(formatPoke);
     setCountPages(data.count);
+    setIsLoading(false);
+
+    setTimeout(() => {
+      setIsLoading(false); // Define isLoading para false após os dados serem carregados
+    }, 300);
   };
+
+  
 
   useEffect(() => {
     fetchPokemon();
   }, [currentPage]);
+
+
 
   function addPokemonToFavorite(pokemon) {
     setFavouritedPokemons([...favouritedPokemons, pokemon]);
@@ -74,6 +88,7 @@ const Home = () => {
         pokemons={listOfPokemons}
         handleSelect={handleSelect}
         handleFavorited={isFavorited}
+        isLoading={isLoading}
       />
       <Pagination
         handleChange={fetchPokemon}

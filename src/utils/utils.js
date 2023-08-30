@@ -11,6 +11,10 @@ export function formatPokeId(id) {
 export const formatPokeList = ({ name, url }) => {
   const [, , , , , , id] = url.split("/");
   const image = formatImage(id);
+  const pokezin = fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    .then((response) => response.json())
+    .then((data) => data.abilities);
+  console.log(pokezin);
   return { id, name, image };
 };
 

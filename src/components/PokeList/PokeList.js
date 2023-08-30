@@ -3,7 +3,7 @@ import React from "react";
 import { Container, List } from "./styles";
 import PokeCard from "../PokeCard";
 
-const PokeList = ({ pokemons = [], handleSelect, handleFavorited }) => {
+const PokeList = ({ pokemons = [], handleSelect, handleFavorited, isLoading }) => {
   return (
     <Container>
       <List>
@@ -14,6 +14,7 @@ const PokeList = ({ pokemons = [], handleSelect, handleFavorited }) => {
             name={pokemon.name}
             handleSelect={() => handleSelect(pokemon)}
             isFavorited={handleFavorited(pokemon)}
+            isLoading={isLoading}
           />
         ))}
       </List>
