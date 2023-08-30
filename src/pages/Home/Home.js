@@ -31,7 +31,7 @@ const Home = () => {
     setIsLoading(false);
 
     setTimeout(() => {
-      setIsLoading(false); // Define isLoading para false após os dados serem carregados
+      setIsLoading(false);
     }, 300);
   };
 
